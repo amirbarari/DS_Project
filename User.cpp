@@ -15,9 +15,9 @@ int User::Get_Id()
 	return this->Id;
 }
 
-string User::Get_F_Name()
+string User::Get_University()
 {
-	return this->F_Name;
+	return this->University;
 }
 
 string User::Get_Job_Place()
@@ -35,9 +35,9 @@ void User::Set_Name(string name)
 	this->Name = name;
 }
 
-void User::Set_F_Name(string f_name)
+void User::Set_University(string uni)
 {
-	this->F_Name = f_name;
+	this->University = uni;
 }
 
 void User::Set_Id(int id)
@@ -63,4 +63,9 @@ void User::Set_Year_Of_Birth(int yob)
 void User::Set_Connections(vector<int> ids)
 {
 	this->Connections = ids;
+}
+
+void User::Add_New_Connection(int id)
+{
+	Connections.push_back(id);
 }

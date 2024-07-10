@@ -4,12 +4,13 @@
 
 using namespace std;
 
-class User {
+class User
+{
 
 private:
 	int Id;
 	string Name;
-	string F_Name;
+	string University;
 	int Year_Of_Birth;
 	string Major;
 	string Job_Place;
@@ -20,12 +21,12 @@ public:
 	string Get_Name();
 	string Get_Major();
 	int Get_Id();
-	string Get_F_Name();
+	string Get_University();
 	string Get_Job_Place();
 	vector<int> Get_Connections();
-	//seters
+	// seters
 	void Set_Name(string name);
-	void Set_F_Name(string f_name);
+	void Set_University(string f_name);
 	void Set_Id(int id);
 	void Set_Job_Place(string j_place);
 	void Set_Major(string major);
@@ -33,5 +34,5 @@ public:
 	void Set_Connections(vector<int> ids);
 
 	// methods
-
+	void Add_New_Connection(int id);
 };

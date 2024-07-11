@@ -30,6 +30,16 @@ vector<int> User::Get_Connections()
 	return this->Connections;
 }
 
+int User::Get_Year_Of_Birth()
+{
+	return Year_Of_Birth;
+}
+
+int User::Get_Score()
+{
+	return Score;
+}
+
 void User::Set_Name(string name)
 {
 	this->Name = name;
@@ -65,7 +75,21 @@ void User::Set_Connections(vector<int> ids)
 	this->Connections = ids;
 }
 
+void User::Set_Score(int score)
+{
+	this->Score = score;
+}
+
 void User::Add_New_Connection(int id)
 {
 	Connections.push_back(id);
+}
+
+bool User::Is_Connections_Empty()
+{
+	return Connections.empty() ? true : false;
+}
+
+bool User::operator<(const User& other) const {
+	return Score < other.Score;
 }
